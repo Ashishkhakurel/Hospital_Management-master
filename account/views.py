@@ -22,6 +22,8 @@ def home_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')
     return render(request,'hospital/index.html')
+def about(request):
+    return render(request,'hospital/about.html')
 
 def doctor_signup_view(request):
     userForm=forms.DoctorUserForm()
